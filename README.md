@@ -148,5 +148,13 @@ Allí podrás probar todos los endpoints de la API.
 Proyecto académico de backend con autenticación, control de roles y arquitectura modular.
 
 ---
+## Frontend
+
+https://github.com/FabianPertuz/FoodieRankFrontend
+
+## Documentacion
+
+https://www.notion.so/299fa9bc6872801f870dd3feffae1ff6?v=299fa9bc6872806fb811000cb22caadf
+
 
 © 2025 FoodieRank - Todos los derechos reservados.
