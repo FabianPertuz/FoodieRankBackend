@@ -141,6 +141,11 @@ Una vez corras el servidor, entra a:
 Allí podrás probar todos los endpoints de la API.
 
 ---
+## 📽️ Video explicativo y sprints
+
+Video explicativo sobre backend y frontend: www.youtube.com/watch?v=jRt2IF9iNX4&feature=youtu.be
+
+Sprints: www.youtube.com/watch?v=MyanitrV8jY&feature=youtu.be
 
 ## 🧭 Autor
 
