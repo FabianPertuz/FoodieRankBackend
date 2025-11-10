@@ -14,6 +14,10 @@ const categoriesRoutes = require('./routes/categories.routes');
 const restaurantsRoutes = require('./routes/restaurants.routes');
 const dishesRoutes = require('./routes/dishes.routes');
 const reviewsRoutes = require('./routes/reviews.routes');
+const favoritesRoutes = require('./routes/favorites.routes');
+// ...
+
+
 require('./config/passport'); // passport strategy
 
 const app = express();
@@ -40,6 +44,7 @@ app.use(`/api/${process.env.API_VERSION || 'v1'}/categories`, categoriesRoutes);
 app.use(`/api/${process.env.API_VERSION || 'v1'}/restaurants`, restaurantsRoutes);
 app.use(`/api/${process.env.API_VERSION || 'v1'}/dishes`, dishesRoutes);
 app.use(`/api/${process.env.API_VERSION || 'v1'}/reviews`, reviewsRoutes);
+app.use(`/api/${process.env.API_VERSION || 'v1'}/favorites`, favoritesRoutes);
 
 // swagger
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));

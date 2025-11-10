@@ -17,6 +17,7 @@ async function connectToMongo() {
   db = client.db(DB_NAME);
 
   await db.collection('users').createIndex({ email: 1 }, { unique: true });
+  await db.collection('favorites').createIndex({ userId: 1, resourceType: 1, resourceId: 1 }, { unique: true, partialFilterExpression: { userId: { $exists: true } } });
   await db.collection('restaurants').createIndex({ name: 1, location: 1 });
   await db.collection('categories').createIndex({ name: 1 }, { unique: true });
   await db.collection('dishes').createIndex({ restaurantId: 1, name: 1 }, { unique: true, partialFilterExpression: { restaurantId: { $exists: true } } });
