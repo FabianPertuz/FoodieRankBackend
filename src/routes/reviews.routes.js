@@ -82,4 +82,19 @@ router.get(
   ReviewsController.listByResource
 );
 
+
+
+/**
+ * @route POST /api/v1/reviews/:id_restaurant
+ * @desc Exportar archivo CSV
+ */
+router.post(
+  '/:resourceId',
+  [
+    param("resourceId").isMongoId()
+  ],
+  validator,
+  ReviewsController.exportReviewsCSV
+)
+
 module.exports = router;

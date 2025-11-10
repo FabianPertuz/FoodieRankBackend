@@ -1,6 +1,12 @@
 const { getDb, getClient } = require('../db/mongo.client');
 const { ObjectId } = require('mongodb');
 const rankingUtil = require('../utils/ranking.util');
+const fs = require('fs');
+const path = require('path');
+const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+const reviewsData = require('../data/reviews.json');
+const restaurantData = require('../data/restaurant.json');
+
 
 // ==================== CREAR RESEÑA ====================
 async function create(req, res, next) {
@@ -235,4 +241,51 @@ async function listByResource(req, res, next) {
   }
 }
 
-module.exports = { create, update, remove, react, listByResource };
+async function exportReviewsCSV(req, res) {
+  try {
+    const db = getDb();
+    const { resourceId } = req.params;
+    const resourceObjectId= new ObjectId(resourceId)
+    const restaurante = await db
+     .collection('restaurants')
+     .find({ resourceId: resourceObjectId})
+    ;
+    if (!restaurante) {
+      return res.status(404).json({ error: 'Restaurante no encontrado' });
+    }
+  
+    const reseñasRestaurante = reviewsData.filter(r => r.resourceId === parseInt(resourceId));
+
+    if (reseñasRestaurante.length === 0) {
+      return res.status(404).json({ error: 'No hay reseñas para este restaurante' });
+    }  const exportDir = path.join(__dirname, '../exports');
+    if (!fs.existsSync(exportDir)) {
+      fs.mkdirSync(exportDir);
+    }
+
+    const fileName = `reviews_restaurante_${resourceId}.csv`;
+    const filePath = path.join(exportDir, filename)
+    const csvWriter = createCsvWriter({
+      path: filePath,
+      header: [
+        { id: 'comentario', title: 'Comentario' },
+        { id: 'calificacion', title: 'Calificación' },
+        { id: 'autor', title: 'Autor' },
+        { id: 'fecha', title: 'Fecha' },
+      ]
+    });
+    await csvWriter.writeRecords(reseñasRestaurante);
+
+    res.json({
+      message: 'Archivo CSV generado exitosamente',
+      archivo: `/exports/${fileName}`
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Error al generar el archivo CSV' })
+    console.log(error);
+  }
+}; 
+
+module.exports = { create, update, remove, react, listByResource, exportReviewsCSV }

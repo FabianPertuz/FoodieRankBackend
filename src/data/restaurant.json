@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8ce"
+  },
+  "name": "BurgerZone",
+  "description": "Especialistas en hamburguesas artesanales",
+  "category": "Comida rápida",
+  "location": "Bogotá, Colombia",
+  "approved": true,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.157Z"
+  },
+  "ratingCount": 2,
+  "ratingSum": 6,
+  "updatedAt": {
+    "$date": "2025-11-10T16:46:28.867Z"
+  },
+  "rankingScore": 3.33
+},
+{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8cf"
+  },
+  "name": "Sakura",
+  "description": "Auténtico sushi japonés",
+  "category": "Sushi",
+  "location": "Medellín, Colombia",
+  "approved": true,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.157Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8d0"
+  },
+  "name": "VerdeVida",
+  "description": "Cocina vegetariana y saludable",
+  "category": "Vegetariano",
+  "location": "Cali, Colombia",
+  "approved": true,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.157Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691215dc2c4cf330a6263887"
+  },
+  "name": "macdonal",
+  "description": "",
+  "categoryId": null,
+  "location": "cañaveral",
+  "proposedBy": {
+    "$oid": "69120ed02c4cf330a6263880"
+  },
+  "approved": false,
+  "createdAt": {
+    "$date": "2025-11-10T16:42:04.756Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T16:42:04.756Z"
+  }
+}]

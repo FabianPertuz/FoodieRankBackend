@@ -1,0 +1,107 @@
+[{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8d4"
+  },
+  "userId": {
+    "$oid": "69120bfdf7fd5e9e384ac8c8"
+  },
+  "restaurantId": {
+    "$oid": "69120bfdf7fd5e9e384ac8ce"
+  },
+  "dishId": {
+    "$oid": "69120bfdf7fd5e9e384ac8d1"
+  },
+  "comment": "Excelente sabor y atención",
+  "rating": 5,
+  "likes": 10,
+  "dislikes": 1,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.200Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8d5"
+  },
+  "userId": {
+    "$oid": "69120bfdf7fd5e9e384ac8c9"
+  },
+  "restaurantId": {
+    "$oid": "69120bfdf7fd5e9e384ac8cf"
+  },
+  "dishId": {
+    "$oid": "69120bfdf7fd5e9e384ac8d2"
+  },
+  "comment": "Buen sushi, pero un poco caro",
+  "rating": 4,
+  "likes": 6,
+  "dislikes": 0,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.200Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "69120bfdf7fd5e9e384ac8d6"
+  },
+  "userId": {
+    "$oid": "69120bfdf7fd5e9e384ac8c9"
+  },
+  "restaurantId": {
+    "$oid": "69120bfdf7fd5e9e384ac8d0"
+  },
+  "dishId": {
+    "$oid": "69120bfdf7fd5e9e384ac8d3"
+  },
+  "comment": "Muy saludable y sabroso",
+  "rating": 5,
+  "likes": 8,
+  "dislikes": 0,
+  "createdAt": {
+    "$date": "2025-11-10T15:59:57.200Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691210b52c4cf330a6263883"
+  },
+  "resourceType": "restaurant",
+  "resourceId": {
+    "$oid": "69120bfdf7fd5e9e384ac8ce"
+  },
+  "rating": 5,
+  "comment": "davison te amo",
+  "author": {
+    "$oid": "69120ed02c4cf330a6263880"
+  },
+  "likes": 1,
+  "dislikes": 0,
+  "createdAt": {
+    "$date": "2025-11-10T16:20:05.646Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T16:20:05.646Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "691216e42c4cf330a6263888"
+  },
+  "resourceType": "restaurant",
+  "resourceId": {
+    "$oid": "69120bfdf7fd5e9e384ac8ce"
+  },
+  "rating": 1,
+  "comment": "malisimo",
+  "author": {
+    "$oid": "691211c52c4cf330a6263884"
+  },
+  "likes": 0,
+  "dislikes": 0,
+  "createdAt": {
+    "$date": "2025-11-10T16:46:28.867Z"
+  },
+  "updatedAt": {
+    "$date": "2025-11-10T16:46:28.867Z"
+  }
+}]
